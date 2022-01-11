@@ -4,11 +4,14 @@ This python application let you automate stuff like taking attendance during you
 Inspiration : MMLS2 is suck, no notification from lecturers, QR code is unscannable using MMLS mobile application, that's what inspire me to build this.
 
 ## Instructions
-First , pip install these few stuff (Make sure your python is added to path)
+1.First , pip install these few stuff (Make sure your python is added to path)
 -pip install opencv
 -pip install selenium
 -pip install pyautogui
 <br>
+2.Download chromedriver.exe from https://chromedriver.chromium.org/downloads, make sure you downloaded the right version, and also include the path to it in selenium_header.py (check out the file , and you will see where should you put it on)
+3.Run app.py to start this application.
+
 Other libraries are included in python itself (Probably).
 <br>
 There's no GUI for this application, all things are done in text-based UI. But it's still user-friendly though, feel free to use it. :))
