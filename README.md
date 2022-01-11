@@ -6,7 +6,7 @@ Inspiration : MMLS2 is suck, no notification from lecturers, QR code is unscanna
 ## Instructions
 1.First , pip install these few stuff (Make sure your python is added to path)
 <br>
--pip install opencv
+-pip install opencv-python
 <br>
 -pip install selenium
 <br>
