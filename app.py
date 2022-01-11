@@ -3,7 +3,7 @@ from datetime import datetime
 import logging
 
 date = datetime.today().strftime("%d-%m-%y--%I-%M")
-logging.basicConfig(format = "%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s",level = logging.INFO, filename = f"logs-{date}.txt")
+logging.basicConfig(format = "%(asctime)s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s",level = logging.INFO, filename = f"logs\\logs-{date}.txt")
 
 def main():
     logging.info("Starting main menu.")
