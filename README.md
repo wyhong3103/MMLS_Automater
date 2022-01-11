@@ -53,6 +53,6 @@ It was a pretty fun project to do, it's been sometimes since the last time I dea
 ## Bugs
 Application would crash, if a MMU Attendance QR Code is not found on the screen.
 <br>
-
+Also i do realised there's a typo in the title.
 
 ### HAVE FUN USING IT.
