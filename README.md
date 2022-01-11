@@ -10,6 +10,7 @@ Inspiration : MMLS2 is suck, no notification from lecturers, QR code is unscanna
 -pip install pyautogui
 <br>
 2.Download chromedriver.exe from https://chromedriver.chromium.org/downloads, make sure you downloaded the right version, and also include the path to it in selenium_header.py (check out the file , and you will see where should you put it on)
+<br>
 3.Run app.py to start this application.
 
 Other libraries are included in python itself (Probably).
