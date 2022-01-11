@@ -50,4 +50,9 @@ Username and password stored are not encrypted and all, so please, be aware of i
 ## Thoughts
 It was a pretty fun project to do, it's been sometimes since the last time I dealt with selenium and other modules. Not sure how can we implement asyncIO in this application, but I am pretty sure this application can still be optimize and all.
 
+## Bugs
+Application would crash, if a MMU Attendance QR Code is not found on the screen.
+<br>
+
+
 ### HAVE FUN USING IT.
