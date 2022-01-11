@@ -1,4 +1,4 @@
-# MMLS Automater
+# MMLS Automator
 This python application let you automate stuff like taking attendance during your lecture , check your MMLS for any new announcements.
 <br>
 Inspiration : MMLS2 is suck, no notification from lecturers, QR code is unscannable using MMLS mobile application, that's what inspire me to build this.
