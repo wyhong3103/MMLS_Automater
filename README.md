@@ -55,4 +55,10 @@ Application would crash, if a MMU Attendance QR Code is not found on the screen.
 <br>
 Also i do realised there's a typo in the title.
 
+## QnA
+Selenium gives "selenium.common.exceptions.WebDriverException: Message: unknown error: cannot find Chrome binary", what do I do?
+<br>
+https://stackoverflow.com/questions/46026987/selenium-gives-selenium-common-exceptions-webdriverexception-message-unknown
+
+
 ### HAVE FUN USING IT.
