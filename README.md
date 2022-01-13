@@ -67,8 +67,6 @@ It was a pretty fun project to do, it's been sometimes since the last time I dea
 -Who knows...
 
 ## QnA
-Selenium gives "selenium.common.exceptions.WebDriverException: Message: unknown error: cannot find Chrome binary", what do I do?
-<br>
-https://stackoverflow.com/questions/46026987/selenium-gives-selenium-common-exceptions-webdriverexception-message-unknown
+-
 
 ### HAVE FUN USING IT.
