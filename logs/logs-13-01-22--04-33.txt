@@ -1,0 +1,83 @@
+2022-01-13 16:33:05,524 INFO     [app.py:9] Starting main menu.
+2022-01-13 16:33:05,524 INFO     [menu.py:7] Main menu started.
+2022-01-13 16:33:09,000 INFO     [menu.py:14] Option M is selected.
+2022-01-13 16:33:09,000 INFO     [menu.py:16] Creating MMLS' Instance.
+2022-01-13 16:33:12,388 INFO     [menu.py:19] Attempting to Login.
+2022-01-13 16:33:12,388 INFO     [page.py:24] Retrieved user information from JSON and checking if it's empty.
+2022-01-13 16:33:18,624 INFO     [page.py:31] Asking user for ID and Password, and it's being updated to JSON.
+2022-01-13 16:33:21,060 INFO     [page.py:61] Selenium is attempting to login using user information provided.
+2022-01-13 16:33:21,075 INFO     [menu.py:21] Login Successfully, and now starting to do announcement checking.
+2022-01-13 16:33:21,076 INFO     [page.py:84] Getting all the subject cards as an element tag.
+2022-01-13 16:33:21,088 INFO     [page.py:84] Getting all the subject cards as an element tag.
+2022-01-13 16:33:21,111 INFO     [page.py:168] PMF0101
+MULTIMEDIA FUNDAMENTALS is being checked for new announcements.
+2022-01-13 16:33:21,592 INFO     [parser.py:51] subject_infos JSON file is being read.
+2022-01-13 16:33:21,592 INFO     [parser.py:15] Subjects' JSON File is being updated
+2022-01-13 16:33:21,592 INFO     [parser.py:18] PMF0101
+MULTIMEDIA FUNDAMENTALS is not found in the JSON, it's being initialized.
+2022-01-13 16:33:21,608 INFO     [parser.py:30] New announcements are getting updated to the JSON object.
+2022-01-13 16:33:21,944 INFO     [parser.py:57] subject_infos JSON file is being written.
+2022-01-13 16:33:22,190 INFO     [page.py:84] Getting all the subject cards as an element tag.
+2022-01-13 16:33:22,216 INFO     [page.py:168] PPP0101
+PRINCIPLES OF PHYSICS is being checked for new announcements.
+2022-01-13 16:33:22,488 INFO     [parser.py:51] subject_infos JSON file is being read.
+2022-01-13 16:33:22,489 INFO     [parser.py:15] Subjects' JSON File is being updated
+2022-01-13 16:33:22,489 INFO     [parser.py:18] PPP0101
+PRINCIPLES OF PHYSICS is not found in the JSON, it's being initialized.
+2022-01-13 16:33:22,499 INFO     [parser.py:30] New announcements are getting updated to the JSON object.
+2022-01-13 16:33:22,920 INFO     [parser.py:57] subject_infos JSON file is being written.
+2022-01-13 16:33:23,177 INFO     [page.py:84] Getting all the subject cards as an element tag.
+2022-01-13 16:33:23,205 INFO     [page.py:168] PDS0101
+INTRO TO DIGITAL SYSTEMS is being checked for new announcements.
+2022-01-13 16:33:23,476 INFO     [parser.py:51] subject_infos JSON file is being read.
+2022-01-13 16:33:23,477 INFO     [parser.py:15] Subjects' JSON File is being updated
+2022-01-13 16:33:23,477 INFO     [parser.py:18] PDS0101
+INTRO TO DIGITAL SYSTEMS is not found in the JSON, it's being initialized.
+2022-01-13 16:33:23,486 INFO     [parser.py:30] New announcements are getting updated to the JSON object.
+2022-01-13 16:33:23,651 INFO     [parser.py:57] subject_infos JSON file is being written.
+2022-01-13 16:33:23,937 INFO     [page.py:84] Getting all the subject cards as an element tag.
+2022-01-13 16:33:23,962 INFO     [page.py:168] PCR0025
+CRITICAL THINKING is being checked for new announcements.
+2022-01-13 16:33:24,207 INFO     [parser.py:51] subject_infos JSON file is being read.
+2022-01-13 16:33:24,208 INFO     [parser.py:15] Subjects' JSON File is being updated
+2022-01-13 16:33:24,208 INFO     [parser.py:18] PCR0025
+CRITICAL THINKING is not found in the JSON, it's being initialized.
+2022-01-13 16:33:24,219 INFO     [parser.py:30] New announcements are getting updated to the JSON object.
+2022-01-13 16:33:24,518 INFO     [parser.py:57] subject_infos JSON file is being written.
+2022-01-13 16:33:24,775 INFO     [page.py:84] Getting all the subject cards as an element tag.
+2022-01-13 16:33:24,802 INFO     [page.py:168] PMT0201
+MATHEMATICS II is being checked for new announcements.
+2022-01-13 16:33:25,099 INFO     [parser.py:51] subject_infos JSON file is being read.
+2022-01-13 16:33:25,100 INFO     [parser.py:15] Subjects' JSON File is being updated
+2022-01-13 16:33:25,100 INFO     [parser.py:18] PMT0201
+MATHEMATICS II is not found in the JSON, it's being initialized.
+2022-01-13 16:33:25,110 INFO     [parser.py:30] New announcements are getting updated to the JSON object.
+2022-01-13 16:33:25,286 INFO     [parser.py:57] subject_infos JSON file is being written.
+2022-01-13 16:33:25,532 INFO     [page.py:84] Getting all the subject cards as an element tag.
+2022-01-13 16:33:25,557 INFO     [page.py:168] PEN0055
+ESSENTIAL ENGLISH is being checked for new announcements.
+2022-01-13 16:33:25,791 INFO     [parser.py:51] subject_infos JSON file is being read.
+2022-01-13 16:33:25,792 INFO     [parser.py:15] Subjects' JSON File is being updated
+2022-01-13 16:33:25,792 INFO     [parser.py:18] PEN0055
+ESSENTIAL ENGLISH is not found in the JSON, it's being initialized.
+2022-01-13 16:33:25,800 INFO     [parser.py:30] New announcements are getting updated to the JSON object.
+2022-01-13 16:33:25,885 INFO     [parser.py:57] subject_infos JSON file is being written.
+2022-01-13 16:33:26,126 INFO     [page.py:188] Asking for user options for viewing announcements.
+2022-01-13 16:33:29,385 INFO     [page.py:93] Viewing all new announcements from all subjects.
+2022-01-13 16:33:29,430 INFO     [page.py:188] Asking for user options for viewing announcements.
+2022-01-13 16:33:58,970 INFO     [page.py:134] Selecting subject to be view.
+2022-01-13 16:34:03,560 INFO     [page.py:117] Viewing announcements from PMF0101
+MULTIMEDIA FUNDAMENTALS.
+2022-01-13 16:34:03,562 INFO     [page.py:188] Asking for user options for viewing announcements.
+2022-01-13 16:34:06,896 INFO     [menu.py:34] Option is being reinitialized to 0.
+2022-01-13 16:34:08,040 INFO     [menu.py:14] Option A is selected.
+2022-01-13 16:34:08,040 INFO     [menu.py:24] Attendance Instance is created.
+2022-01-13 16:34:08,040 INFO     [attendance.py:47] Preparing to scan QR Code.
+2022-01-13 16:34:13,135 INFO     [attendance.py:52] QRCode.jpg is being saved, and waiting to be scan.
+2022-01-13 16:34:13,225 INFO     [attendance.py:55] QRCode is scanned and decoded into strings.
+2022-01-13 16:34:13,380 INFO     [attendance.py:62] QRCode.jpg is removed and deleted from the machine.
+2022-01-13 16:34:13,380 INFO     [attendance.py:67] QR code is not detected!
+2022-01-13 16:34:13,383 INFO     [menu.py:34] Option is being reinitialized to 0.
+2022-01-13 16:34:15,192 INFO     [menu.py:14] Option E is selected.
+2022-01-13 16:34:15,193 INFO     [menu.py:27] Closing chrome browser.
+2022-01-13 16:34:15,228 INFO     [app.py:11] Ending this application.
