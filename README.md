@@ -1,3 +1,5 @@
+Still debugging....
+
 # MMLS Automator
 This python application let you automate stuff like taking attendance during your lecture , check your MMLS for any new announcements.
 <br>
