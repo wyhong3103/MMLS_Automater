@@ -9,6 +9,9 @@ class Parser:
         self.parent = parent
 
     def jsonUpdate(self,subject_dict : str,subjectName : str) -> Dict:
+        """
+        This function helps to grab the new announcements and return it to the caller function.
+        """
         logging.info("Subjects' JSON File is being updated")
         #0 is the number of announcement, since it's initialization phase, we initialise it with 0
         if subjectName not in subject_dict:
@@ -40,7 +43,10 @@ class Parser:
         return subject_dict
 
 
-    def announcementChecker(self,subjectName) -> Dict:
+    def announcementChecker(self,subjectName : str) -> Dict:
+        """
+        This function loads the subject's announcements(OLD) from the JSON, and get the update it with the new one.
+        """
         with open("json\\subject_infos","r") as json_file:
             logging.info("subject_infos JSON file is being read.")
             subject = json.load(json_file)
