@@ -1,6 +1,4 @@
-Still debugging, I am going to reimplement qrcode detection with pyzbar and opencv instead.
-
-# MMLS Automator
+# MMLS Automator 2.0 (I guess, fixed a few bugs)
 This python application let you automate stuff like taking attendance during your lecture , check your MMLS for any new announcements.
 <br>
 Inspiration : MMLS2 is suck, no notification from lecturers, QR code is unscannable using MMLS mobile application, that's what inspire me to build this.
@@ -14,7 +12,9 @@ Inspiration : MMLS2 is suck, no notification from lecturers, QR code is unscanna
 <br>
 -pip install pyautogui
 <br>
-2.Download chromedriver.exe from https://chromedriver.chromium.org/downloads, make sure you downloaded the right version, and also include the path to it in selenium_header.py (check out the file , and you will see where should you put it on)
+-pip install pyzbar
+<br>
+2.Download chromedriver.exe from https://chromedriver.chromium.org/downloads, make sure you downloaded the right version for your browser, and also include the path to it in selenium_header.py (check out the file , and you will see where should you put it on), also the path of your chrome.exe.
 <br>
 3.Run app.py to start this application.
 <br>
@@ -25,12 +25,12 @@ There's no GUI for this application, all things are done in text-based UI. But i
 ## Functionalities
 -View annnouncements from MMLS
 <br>
--Take attendance from QR Code
+-Take attendance from QR Code, (it would also works in a case where you got two QR code on the screen)
 <br>
 And that's essentially what it does.
 
 ## Modules Included
--OpenCV (QR Code Decoder)
+-OpenCV (Image processing , i guess)
 <br>
 -Selenium (Browser Automation)
 <br>
@@ -45,6 +45,10 @@ And that's essentially what it does.
 -Json(Use to store files, like announcements, user information)
 <br>
 -Time(Countdown timer)
+<br>
+-Pyzbar (QR Code decode)
+<br>
+-Regular Expression (Filter the links)
 
 ## Side Note
 Username and password stored are not encrypted and all, so please, be aware of it, and use it on your own risk.
@@ -53,16 +57,18 @@ Username and password stored are not encrypted and all, so please, be aware of i
 It was a pretty fun project to do, it's been sometimes since the last time I dealt with selenium and other modules. Not sure how can we implement asyncIO in this application, but I am pretty sure this application can still be optimize and all.
 
 ## Bugs
-Application would crash, if a MMU Attendance QR Code is not found on the screen.
+-Did not found any of them yet, in 2.0
+
+## What's coming next??
+-Most probably, a GUI version of this thing.
 <br>
-Also i do realised there's a typo in the title.
+-I am collaborating with my dude @goldensquirell to improve it
 <br>
-IT'S SUCH A MESS, OPENCV COULDN'T DETECT THE QRCODE SOMETIME.
+-Who knows...
 
 ## QnA
 Selenium gives "selenium.common.exceptions.WebDriverException: Message: unknown error: cannot find Chrome binary", what do I do?
 <br>
 https://stackoverflow.com/questions/46026987/selenium-gives-selenium-common-exceptions-webdriverexception-message-unknown
-
 
 ### HAVE FUN USING IT.
