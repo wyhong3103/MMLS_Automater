@@ -5,7 +5,7 @@ import logging
 
 def menu():
     logging.info("Main menu started.")
-    print(f"MMLS Automation 1.0")
+    print(f"MMLS Automator 2.0")
     options_set = {"M","A","E"}
     options = 0
 
@@ -15,8 +15,9 @@ def menu():
         if options == "M":
             logging.info(f"Creating MMLS' Instance.")
             mmls = Page(chrome)
+            print("\nLoading...\n")
             logging.info(f"Attempting to Login.")
-            mmls._login()
+            mmls.login()
             logging.info(f"Login Successfully, and now starting to do announcement checking.")
             mmls.subjects_checker()
         elif options == "A":

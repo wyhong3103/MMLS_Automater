@@ -1,6 +1,7 @@
 from typing import List
 import cv2
 import pyautogui
+from pyzbar import pyzbar
 import time
 import os
 import json
@@ -11,35 +12,63 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 import logging
+import re
 
+
+class noQrCodeFound(ValueError):
+    pass
 
 class AttendancePage:
     def __init__(self,parent):
         self.parent = parent
-        self.parent.get(self.qrcode_read)
-        logging.info("Accessing to the attendance site.")
-        self.take_attendance()
+        self.qrcodes = self.qrcode_read
+        if self.qrcodes:
+            for i,j in enumerate(self.qrcodes):
+                url = j
+                pattern = "https://mmls2.mmu.edu.my/attendance.+"
+                logging.info("Using regular expression to validate the link provided.")
+                if re.search(pattern,url):
+                    self.parent.get(j)
+                    logging.info("Accessing to the attendance site.")
+                    print(f"QR Code {i+1}:")
+                    self.take_attendance()
+                else:
+                    logging.info("QR Code contains non-mmls link.")
+                    print(f"QR Code {i+1}:")
+                    print("QR Code contains non-mmls link.\n")
+
 
     @property
     def qrcode_read(self):
-        logging.info("Preparing to scan QR Code.")
-        for i in range(5,0,-1):
-            print(f"Make sure the qrcode is staying on your screen... {i}")
-            time.sleep(1)
-        screenshot = pyautogui.screenshot()
-        logging.info("QRCode.jpg is being saved, and waiting to be scan.")
-        screenshot.save("qrcode.jpg")
-        d = cv2.QRCodeDetector()
-        logging.info("QRCode is scanned and decoded into strings.")
-        val = d.detectAndDecode(cv2.imread("qrcode.jpg"))[0]
+        """
+        This function convert the QR Code on your screen to URL, and return it.
+        """
+        try:
+            logging.info("Preparing to scan QR Code.")
+            for i in range(5,0,-1):
+                print(f"Make sure the qrcode is staying on your screen... {i}")
+                time.sleep(1)
+            screenshot = pyautogui.screenshot()
+            logging.info("QRCode.jpg is being saved, and waiting to be scan.")
+            screenshot.save("qrcode.jpg")
+            img = cv2.imread("qrcode.jpg")
+            logging.info("QRCode is scanned and decoded into strings.")
+            qrcode = pyzbar.decode(img)
+            #detect and decode returns a few argument, the first is what you want, the string
+            qrcodes = []
+            for qr in qrcode:
+                qrcodes.append(qr.data.decode("utf-8"))
+            os.remove("qrcode.jpg")
+            logging.info("QRCode.jpg is removed and deleted from the machine.")
+            if not qrcodes:
+                raise noQrCodeFound
+            return qrcodes
+        except noQrCodeFound:
+            logging.info("QR code is not detected!")
+            print("\nQR code is not found on the screen!\n")
+            return False
 
-        #detect and decode returns a few argument, the first is what you want, the string
-        os.remove("qrcode.jpg")
-        logging.info("QRCode.jpg is removed and deleted from the machine.")
-
-        return val
-
-    def _getIdPw(self) -> List:
+    def getIdPw(self) -> List:
         """
         This function essentially asks for username and password, if it isn't exist in the json file.
         """
@@ -61,14 +90,16 @@ class AttendancePage:
         return [userinfo["username"],userinfo["password"]]
 
     def take_attendance(self):
+        """
+        This function login to the site and take attendance for you.
+        """
         if self.parent.current_url != "https://mmls2.mmu.edu.my/attendance/success/home":
             login_successful = False
-
             while not login_successful:
                 usernameInput = self.parent.find_element(By.CSS_SELECTOR,AttendanceLocators.USERNAME)
                 pwInput = self.parent.find_element(By.CSS_SELECTOR,AttendanceLocators.PASSWORD)
                 
-                username,password = self._getIdPw()
+                username,password = self.getIdPw()
                 
                 usernameInput.send_keys(username)
                 pwInput.send_keys(password)
@@ -98,6 +129,7 @@ class AttendancePage:
         message = self.parent.find_element(By.CSS_SELECTOR,AttendanceLocators.MESSAGE).text
         logging.info(f"Browser : {message}")
         print(f"\n{message}\n")
+        
 
 
 
