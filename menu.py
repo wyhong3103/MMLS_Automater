@@ -5,7 +5,7 @@ import logging
 
 def menu():
     logging.info("Main menu started.")
-    print(f"MMLS Automation 1.0")
+    print(f"MMLS Automator 2.0")
     options_set = {"M","A","E"}
     options = 0
 
