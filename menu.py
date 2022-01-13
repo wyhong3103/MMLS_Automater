@@ -15,8 +15,9 @@ def menu():
         if options == "M":
             logging.info(f"Creating MMLS' Instance.")
             mmls = Page(chrome)
+            print("\nLoading...\n")
             logging.info(f"Attempting to Login.")
-            mmls._login()
+            mmls.login()
             logging.info(f"Login Successfully, and now starting to do announcement checking.")
             mmls.subjects_checker()
         elif options == "A":
