@@ -1,4 +1,4 @@
-Still debugging....
+Still debugging, I am going to reimplement qrcode detection with pyzbar and opencv instead.
 
 # MMLS Automator
 This python application let you automate stuff like taking attendance during your lecture , check your MMLS for any new announcements.
