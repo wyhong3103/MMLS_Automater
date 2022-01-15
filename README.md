@@ -14,6 +14,8 @@ Inspiration : MMLS2 is suck, no notification from lecturers, QR code is unscanna
 <br>
 -pip install pyzbar
 <br>
+-pip install pillow
+<br>
 2.Download chromedriver.exe from https://chromedriver.chromium.org/downloads, make sure you downloaded the right version for your browser, and also include the path to it in selenium_header.py (check out the file , and you will see where should you put it on), also the path of your chrome.exe.
 <br>
 3.Run app.py to start this application.
@@ -49,6 +51,8 @@ And that's essentially what it does.
 -Pyzbar (QR Code decode)
 <br>
 -Regular Expression (Filter the links)
+<br>
+-Pillow
 
 ## Side Note
 Username and password stored are not encrypted and all, so please, be aware of it, and use it on your own risk.
