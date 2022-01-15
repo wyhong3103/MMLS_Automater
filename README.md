@@ -80,7 +80,7 @@ It was a pretty fun project to do, it's been sometimes since the last time I dea
 
 - Most probably, a GUI version of this thing.
 
-- I am collaborating with my dude @goldensquirel11 to improve it
+- I am collaborating with my dude @goldensquirrel11 to improve it
 
 - Who knows...
 
