@@ -28,6 +28,9 @@ class AttendancePage:
                 pattern = "https://mmls2.mmu.edu.my/attendance.+"
                 logging.info("Using regular expression to validate the link provided.")
                 if re.search(pattern,url):
+                    if self.parent.current_url == "https://mmls2.mmu.edu.my/attendance/success/home":
+                        home_button = self.parent.find_element(By.CSS_SELECTOR,AttendanceLocators.HOME_BUTTON)
+                        home_button.click()
                     self.parent.get(j)
                     logging.info("Accessing to the attendance site.")
                     print(f"QR Code {i+1}:")
@@ -93,38 +96,36 @@ class AttendancePage:
         """
         This function login to the site and take attendance for you.
         """
-        if self.parent.current_url != "https://mmls2.mmu.edu.my/attendance/success/home":
-            login_successful = False
-            while not login_successful:
-                usernameInput = self.parent.find_element(By.CSS_SELECTOR,AttendanceLocators.USERNAME)
-                pwInput = self.parent.find_element(By.CSS_SELECTOR,AttendanceLocators.PASSWORD)
-                
-                username,password = self.getIdPw()
-                
-                usernameInput.send_keys(username)
-                pwInput.send_keys(password)
-                pwInput.send_keys(Keys.ENTER)
-                logging.info("Selenium is attempting to login with the user information provided from JSON.")
-
-                try:
-                    WebDriverWait(self.parent,3).until(
-                        expected_conditions.presence_of_element_located(
-                            (By.CSS_SELECTOR,AttendanceLocators.HOME_BUTTON)
-                        )
-                    )
-                    login_successful = True
-                except TimeoutException:
-                    logging.info("TimeoutException is raised, it's either of the slow connection or login unsucessful.")
-                    if self.parent.current_url != "https://mmls2.mmu.edu.my/attendance/success/home":
-                        logging.info("Login Unsucessful, invalid credential.")
-                        login_successful = False
-                        print("\nInvalid Credential!\n")
-                        with open("json\\randomtextfile","w") as json_file:
-                                userinfo = {"username":"","password":""}
-                                json.dump(userinfo,json_file)
-                        logging.info("Reinitialized the user information in JSON file. Will be asking for it again.")
-            #print message
+        login_successful = False
+        while not login_successful:
+            usernameInput = self.parent.find_element(By.CSS_SELECTOR,AttendanceLocators.USERNAME)
+            pwInput = self.parent.find_element(By.CSS_SELECTOR,AttendanceLocators.PASSWORD)
             
+            username,password = self.getIdPw()
+            
+            usernameInput.send_keys(username)
+            pwInput.send_keys(password)
+            pwInput.send_keys(Keys.ENTER)
+            logging.info("Selenium is attempting to login with the user information provided from JSON.")
+
+            try:
+                WebDriverWait(self.parent,3).until(
+                    expected_conditions.presence_of_element_located(
+                        (By.CSS_SELECTOR,AttendanceLocators.HOME_BUTTON)
+                    )
+                )
+                login_successful = True
+            except TimeoutException:
+                logging.info("TimeoutException is raised, it's either of the slow connection or login unsucessful.")
+                if self.parent.current_url != "https://mmls2.mmu.edu.my/attendance/success/home":
+                    logging.info("Login Unsucessful, invalid credential.")
+                    login_successful = False
+                    print("\nInvalid Credential!\n")
+                    with open("json\\randomtextfile","w") as json_file:
+                            userinfo = {"username":"","password":""}
+                            json.dump(userinfo,json_file)
+                    logging.info("Reinitialized the user information in JSON file. Will be asking for it again.")
+        #print message
         logging.info("Login successfully and taking attendance...")
         message = self.parent.find_element(By.CSS_SELECTOR,AttendanceLocators.MESSAGE).text
         logging.info(f"Browser : {message}")
