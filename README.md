@@ -1,4 +1,4 @@
-# MMLS Automator 2.0 (I guess, fixed a few bugs)
+# MMLS Automator 2.0 (Last update : 1/17/2022 - 11:40 am)
 
 This python application let you automate stuff like taking attendance during your lecture , check your MMLS for any new announcements.
 
