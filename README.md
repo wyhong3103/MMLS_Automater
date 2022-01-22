@@ -90,4 +90,9 @@ It was a pretty fun project to do, it's been sometimes since the last time I dea
 
 - *empty for now*
 
+## License & copyright
+
+Licensed under [MIT License](LICENSE)
+
+
 ### HAVE FUN USING IT
