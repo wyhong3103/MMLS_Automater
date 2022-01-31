@@ -2,11 +2,13 @@
 
 This python application let you automate stuff like taking attendance during your lecture , check your MMLS for any new announcements.
 
-Inspiration : MMLS2 is suck, no notification from lecturers, QR code is unscannable using MMLS mobile application, that's what inspired me to build this.
+Inspiration : MMLS2 has no notification from lecturers, QR code is unscannable using MMLS mobile application, that's what inspired me to build this.
 
 ## Instructions
 
-1. First, pip install these few stuff using (Make sure your python is added to path)
+1. Install a chromium-based browser (Google Chrome, Brave, Chromium, etc.). You can skip this step if you already have one downloaded.
+
+2. pip install these few stuff using (Make sure your python is added to path)
 
     `$ pip install -r "requirements.txt"`
 
@@ -24,9 +26,9 @@ Inspiration : MMLS2 is suck, no notification from lecturers, QR code is unscanna
 
     `$ pip install pillow`
 
-2. Download [chromedriver.exe](https://chromedriver.chromium.org/downloads), make sure you downloaded the right version for your browser, and also include the path to it in selenium_header.py (check out the file , and you will see where should you put it on), also the path of your chrome.exe.
+3. Download [chromedriver.exe](https://chromedriver.chromium.org/downloads), make sure you downloaded the right version for your browser, and also include the path to it in selenium_header.py (check out the file , and you will see where should you put it on), also the path of your chrome.exe.
 
-3. Run `$ py app.py` to start this application.
+4. Run `$ py app.py` to start this application.
 
     Other libraries are included in python itself (Probably).
 
@@ -87,5 +89,10 @@ It was a pretty fun project to do, it's been sometimes since the last time I dea
 ## QnA
 
 - *empty for now*
+
+## License & copyright
+
+Licensed under [MIT License](LICENSE)
+
 
 ### HAVE FUN USING IT

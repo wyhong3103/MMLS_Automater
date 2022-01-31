@@ -2,4 +2,4 @@ __pycache__/
 json/
 chromedriver.exe
 selenium_header.py
-
+logs/
